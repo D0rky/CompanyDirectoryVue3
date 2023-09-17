@@ -1,6 +1,8 @@
 {
   "eslint.alwaysShowStatus": true,
   "eslint.lintTask.enable": true,
+  "css.lint.unknownAtRules": "ignore",
+  "[css]": { "editor.defaultFormatter": "bradlc.vscode-tailwindcss" },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.arrowParens": "always",
   "prettier.jsxSingleQuote": true,
