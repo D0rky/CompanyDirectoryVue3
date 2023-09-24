@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import { useAuth } from '@/composables/useAuth'
 
 const { isAuthenticated, logout, user } = useAuth()
-const brand = ref('Triple S Thrift Shop')
+const brand = ref('Triple S Thrift Shop 🛍️')
 </script>
 
 
