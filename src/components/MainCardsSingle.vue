@@ -1,6 +1,6 @@
 <script setup>
+import * as faker from '@faker-js/faker';
 
-import { faker } from '@faker-js/faker';
 const firstName = faker.name.firstName();
 const lastName = faker.name.lastName();
 const fullName = `${firstName}${lastName}`;
@@ -8,8 +8,8 @@ const fullName = `${firstName}${lastName}`;
 const selectClick = () => {
     console.log(`${fullName} selected`)
 }
-
 </script>
+
 
 
 
