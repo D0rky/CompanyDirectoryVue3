@@ -9,23 +9,28 @@
       await getEmployees()
     }
   }
+
   const nextPage = async () => {
-    if (activePage.value < pages.value) {
+    if (activePage.value < 10) { // Assuming you want to show 10 pages
       activePage.value++
       await getEmployees()
     }
   }
+
   const jumpPage = async (page) => {
     activePage.value = page
     await getEmployees()
   }
+
+  // Generate an array of numbers from 1 to 10
+  const paginationArray = Array.from({ length: 10 }, (_, index) => index + 1);
 </script>
 
 <template>
   <div class="pagination">
     <button class="action" :disabled="activePage === 1" @click="prevPage">Prev</button>
     <button
-      v-for="page in pages"
+      v-for="page in paginationArray"
       :key="page"
       class="page"
       :class="page === activePage ? 'active' : ''"
@@ -33,7 +38,7 @@
     >
       {{ page }}
     </button>
-    <button class="action" :disabled="activePage === pages" @click="nextPage">Next</button>
+    <button class="action" :disabled="activePage === 10" @click="nextPage">Next</button>
   </div>
 </template>
 
