@@ -11,7 +11,7 @@
   }
 
   const nextPage = async () => {
-    if (activePage.value < 10) { // Assuming you want to show 10 pages
+    if (activePage.value < 14) { 
       activePage.value++
       await getEmployees()
     }
@@ -22,8 +22,8 @@
     await getEmployees()
   }
 
-  // Generate an array of numbers from 1 to 10
-  const paginationArray = Array.from({ length: 10 }, (_, index) => index + 1);
+  
+  const paginationArray = Array.from({ length: 14 }, (_, index) => index + 1);
 </script>
 
 <template>
