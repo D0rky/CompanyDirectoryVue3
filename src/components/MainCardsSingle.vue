@@ -6,7 +6,7 @@
   const { getDepartment } = useAPI()
 
   const selectCard = () => {
-    console.log(`${props.employee.name} selected`)
+    console.log(`${props.employee.person} selected`)
   }
 
   const props = defineProps({
@@ -38,8 +38,8 @@
       <img :src="faker.internet.avatar()" alt="" srcset="" />
     </div>
     <div class="card-details">
-      <p class="card-details-name">{{ props.employee.name }}</p>
-      <p class="card-details-job">{{ props.employee.title }}, {{ department.name }}</p>
+      <p class="card-details-name">{{ props.employee.person }}</p>
+      <p class="card-details-job">{{ props.employee.title }}, {{ department.person }}</p>
       <p class="card-details-quote">"{{ props.employee.quote }}"</p>
     </div>
   </div>
